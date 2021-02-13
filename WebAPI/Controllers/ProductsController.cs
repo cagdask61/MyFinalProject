@@ -22,6 +22,7 @@ namespace WebAPI.Controllers
             _productService = productService;
         }
 
+        //https://localhost:44380/api/Products/getall
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
@@ -34,6 +35,7 @@ namespace WebAPI.Controllers
             
         }
 
+        //https://localhost:44380/api/Products/getbyid?id=79
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
@@ -44,7 +46,8 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        
+
+        //https://localhost:44380/api/Products/add
         [HttpPost("add")]
         public IActionResult Add(Product product)
         {
