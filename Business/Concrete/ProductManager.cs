@@ -27,6 +27,8 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+        //Encryption, Hashing
+        //[SecuredOperation()]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
@@ -37,9 +39,9 @@ namespace Business.Concrete
                 return result;
             }
 
-            
+            _productDal.Add(product);
 
-            return new ErrorResult();
+            return new SuccessResult(Messages.ProductAdded);
         }
 
         public IDataResult<List<Product>> GetAll()
@@ -111,5 +113,8 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
+
+
+        
     }
 }
