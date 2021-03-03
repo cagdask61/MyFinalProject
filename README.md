@@ -24,4 +24,4 @@
 </li>
 </ul>
 
-<a href="https://github.com/engindemirog">Teacher</a>
+<a href="https://github.com/engindemirog"><b>Teacher</b></a>
