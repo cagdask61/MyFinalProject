@@ -10,6 +10,7 @@ using System.Text;
 
 namespace Core.Aspects.Autofac.Caching
 {
+
     public class CacheRemoveAspect : MethodInterception
     {
         private string _pattern;
